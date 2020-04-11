@@ -23,20 +23,19 @@ public class TranDucHuynh_58131313_59TH3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ArrayList<CaNhan> p = new  ArrayList<>();
-        ArrayList<HocSinh> s = new ArrayList<>();
+        ArrayList<CaNhan> ls = new ArrayList<>();
         
         HocSinh hs = new HocSinh("TH2", "Hat", "Tran", "Huynh",22, "Nha Trang");
         GiaoVien gv = new GiaoVien("PHP", "CNPM", "Tran", "Hang", 30, "Nha Trang");
+        
         LopHoc lh = new LopHoc();
-        lh.setIQLDS(new QLDS());
+        
         System.out.println(lh.themHS(hs));
-        lh.inDSHS(p);
+        System.out.println(lh.themGVGD(gv));
+        lh.inDSHS(ls);
         System.out.println("----------------------------------");
-        lh.themGVGD(gv);
-       //System.out.println(lh.inDSGVGD());
-//        System.out.println(hs.HienThiTT());
-//        System.out.println(gv.HienThiTT());
+        lh.inDSGVGD(ls);
+
     }
     
 }
