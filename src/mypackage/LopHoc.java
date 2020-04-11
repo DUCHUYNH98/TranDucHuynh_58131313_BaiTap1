@@ -12,33 +12,36 @@ import java.util.ArrayList;
  * @author FPT_2-4
  */
 public class LopHoc{
-    private IQLDS iqlds;
-    public void setIQLDS(IQLDS iqlds) {
-        this.iqlds = iqlds;
-    }
+    ArrayList<HocSinh> s = new ArrayList<>();
+    ArrayList<GiaoVien> t = new ArrayList<>();
+    
+    private QLDS ql = new QLDS();
     
     public LopHoc() {
     }
-    ArrayList<HocSinh> s = new ArrayList<>();
-    ArrayList<GiaoVien> t = new ArrayList<>();
-
     public int themHS(HocSinh hs){ 
         s.add(hs);
-        return iqlds.them(hs);
+        return ql.them(hs);
     }
     
     public int themGVGD(GiaoVien gv){
         t.add(gv);
-        return iqlds.them(gv);
+        return ql.them(gv);
     }
     public void inDSHS(ArrayList<CaNhan> hs){
-        
-            iqlds.inDS(hs);
+        for (int i = 0; i< s.size(); i++)
+        {
+            System.out.println(s.get(i).HienThiTT());
+        }
        
     }
     public void inDSGVGD(ArrayList<CaNhan> gv){
-           iqlds.inDS(gv);
+           for (int i = 0; i< t.size(); i++)
+        {
+            System.out.println(t.get(i).HienThiTT());
+        }
       
     }
+
 
 }

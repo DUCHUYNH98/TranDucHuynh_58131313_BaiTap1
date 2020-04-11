@@ -31,7 +31,7 @@ public class QLDS implements IQLDS{
     @Override
     public void inDS(ArrayList<CaNhan> ls) {
         for (int i = 0; i < ls.size(); i++){
-            ls.get(i).HienThiTT();
+            System.out.println(ls.get(i).HienThiTT());
         }
     }
     
